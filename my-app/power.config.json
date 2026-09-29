@@ -1,0 +1,11 @@
+{
+  "appId": "aaa2f8bb-ed4f-4ca3-ab62-7673ad463e98",
+  "appDisplayName": "Cyber360 Security Findings Management Platform",
+  "description": null,
+  "environmentId": "8df9dcac-cbda-e603-9ebc-d833fe1b181a",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "logoPath": "Default",
+  "localAppUrl": "http://localhost:3000/",
+  "connectionReferences": {}
+}

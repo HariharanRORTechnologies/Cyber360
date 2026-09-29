@@ -1,0 +1,769 @@
+/* ===== RISK OWNER DASHBOARD STYLING ===== */
+
+.ro-dashboard {
+  background: #f5f5f5;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.ro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.ro-header-content {
+  flex: 1;
+}
+
+.ro-header-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.ro-header-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.ro-header-action {
+  padding: 10px 16px;
+  background: #087B36;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.ro-header-action:hover {
+  background: #065f46;
+}
+
+/* ===== CARD HEADER (title + pill) ===== */
+.ro-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ro-card-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.ro-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ro-pill-neutral {
+  background: #ecfdf5;
+  color: #087B36;
+}
+
+.ro-pill-danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* ===== METRICS ROW (3 Cards) ===== */
+.ro-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ro-metric-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== GAUGE / DONUT (small, in metric cards) ===== */
+.ro-gauge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.ro-donut-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.ro-gauge-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ro-gauge-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.ro-gauge-percent {
+  font-size: 22px;
+  font-weight: 800;
+  color: #087B36;
+  line-height: 1.1;
+}
+
+.ro-gauge-percent-sm {
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.ro-gauge-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* ===== LEGEND ===== */
+.ro-legend-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.ro-legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 8px 0 12px 0;
+}
+
+.ro-legend-row-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  min-width: 0;
+}
+
+.ro-legend-row-item-compact {
+  font-size: 11px;
+}
+
+.ro-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ro-legend-text {
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ro-legend-value {
+  color: #1f2937;
+  font-weight: 700;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* ===== STAT TILES (Findings Lifecycle) ===== */
+.ro-stat-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  flex: 1;
+}
+
+.ro-stat-tile {
+  background: #f9fafb;
+  border-left: 3px solid #087B36;
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+
+.ro-stat-tile-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1f2937;
+  line-height: 1.1;
+}
+
+.ro-stat-tile-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.ro-stat-tile-percent {
+  font-size: 10px;
+  color: #9ca3af;
+  margin-top: 1px;
+}
+
+/* ===== SLA VELOCITY (stacked bar + alert) ===== */
+.ro-velocity-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.ro-stacked-bar {
+  display: flex;
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.ro-stacked-segment {
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.ro-alert-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+
+.ro-alert-icon {
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.ro-alert-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #7f1d1d;
+  flex: 1;
+}
+
+.ro-alert-button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.ro-alert-button:hover {
+  background: #b91c1c;
+}
+
+/* ===== FOOTER STATS (bottom row of each card) ===== */
+.ro-footer-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.ro-footer-stats-centered {
+  justify-content: center;
+}
+
+.ro-footer-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ro-footer-stat-success {
+  color: #087B36;
+}
+
+.ro-footer-stat-danger {
+  color: #dc2626;
+}
+
+.ro-footer-divider {
+  color: #d1d5db;
+}
+
+/* ===== CHARTS ROW ===== */
+.ro-charts-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ro-chart-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-height: 380px;
+}
+
+.ro-chart-large {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ro-chart-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.ro-risk-breakdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 240px;
+  gap: 16px;
+}
+
+/* Recharts responsive container sizing */
+.recharts-responsive-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.recharts-surface {
+  overflow: visible !important;
+}
+
+.ro-risk-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.ro-risk-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.ro-risk-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.ro-risk-legend-label {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* ===== TABLE SECTION ===== */
+.ro-table-section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ro-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ro-table-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.ro-table-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: #087B36;
+  text-decoration: none;
+}
+
+.ro-table-link:hover {
+  text-decoration: underline;
+}
+
+/* Table Styling */
+.ro-findings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ro-findings-table thead {
+  background: #087B36;
+  color: white;
+}
+
+.ro-findings-table th {
+  padding: 12px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.ro-findings-table td {
+  padding: 12px;
+  font-size: 13px;
+  color: #1f2937;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ro-findings-table tbody tr:nth-child(odd) {
+  background: white;
+}
+
+.ro-findings-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.ro-findings-table tbody tr:hover {
+  background: #f3f4f6;
+}
+
+.ro-table-id {
+  font-weight: 600;
+  color: #087B36;
+}
+
+.ro-status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ro-status-open {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.ro-status-retest {
+  background: #fed7aa;
+  color: #92400e;
+}
+
+.ro-status-closed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.ro-sla-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ro-sla-within-sla {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.ro-sla-nearing-sla {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.ro-sla-breached-sla {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+  .ro-metrics-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ro-metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ro-charts-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ro-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ro-gauge-row,
+  .ro-donut-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .ro-dashboard {
+    padding: 16px;
+  }
+
+  .ro-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ro-header-title {
+    font-size: 24px;
+  }
+
+  .ro-metrics-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ro-charts-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ro-metric-card,
+  .ro-chart-card,
+  .ro-table-section {
+    padding: 16px;
+  }
+
+  .ro-risk-breakdown {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .ro-findings-table {
+    font-size: 12px;
+  }
+
+  .ro-findings-table th,
+  .ro-findings-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ro-dashboard {
+    padding: 12px;
+  }
+
+  .ro-header-title {
+    font-size: 20px;
+  }
+
+  .ro-header-subtitle {
+    font-size: 12px;
+  }
+
+  .ro-header-action {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .ro-metrics-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ro-charts-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ro-chart-title {
+    font-size: 12px;
+  }
+
+  .ro-table-title {
+    font-size: 13px;
+  }
+
+  .ro-findings-table {
+    font-size: 11px;
+  }
+
+  .ro-findings-table th,
+  .ro-findings-table td {
+    padding: 6px;
+    font-size: 11px;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .ro-dashboard {
+    background: #0f172a;
+  }
+
+  .ro-header {
+    border-bottom-color: #334155;
+  }
+
+  .ro-header-title {
+    color: #f1f5f9;
+  }
+
+  .ro-header-subtitle {
+    color: #cbd5e1;
+  }
+
+  .ro-metric-card,
+  .ro-chart-card,
+  .ro-table-section {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .ro-card-title,
+  .ro-chart-title,
+  .ro-table-title {
+    color: #f1f5f9;
+  }
+
+  .ro-pill-neutral {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+  }
+
+  .ro-gauge-percent {
+    color: #34d399;
+  }
+
+  .ro-gauge-percent-sm {
+    color: #f1f5f9;
+  }
+
+  .ro-gauge-label,
+  .ro-legend-text,
+  .ro-velocity-label,
+  .ro-footer-stats {
+    color: #94a3b8;
+  }
+
+  .ro-legend-value,
+  .ro-stat-tile-value {
+    color: #f1f5f9;
+  }
+
+  .ro-stat-tile {
+    background: #0f172a;
+  }
+
+  .ro-footer-stats {
+    border-top-color: #334155;
+  }
+
+  .ro-footer-stat-success {
+    color: #34d399;
+  }
+
+  .ro-table-header {
+    border-bottom-color: #334155;
+  }
+
+  .ro-findings-table td {
+    border-bottom-color: #334155;
+  }
+
+  .ro-findings-table tbody tr:nth-child(odd) {
+    background: #1e293b;
+  }
+
+  .ro-findings-table tbody tr:nth-child(even) {
+    background: #334155;
+  }
+
+  .ro-findings-table td {
+    color: #f1f5f9;
+  }
+
+  .ro-table-id,
+  .ro-table-link {
+    color: #34d399;
+  }
+
+  .ro-risk-legend-label {
+    color: #e2e8f0;
+  }
+}

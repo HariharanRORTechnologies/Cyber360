@@ -1,0 +1,572 @@
+/* ===== CHART COMPONENTS STYLING ===== */
+
+.chart-wrapper {
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s;
+  min-height: 0;
+}
+
+.chart-wrapper:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== CHART HEADER ===== */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.chart-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.chart-icon {
+  font-size: 24px;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.chart-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.chart-subtitle {
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  display: block;
+  margin-top: 2px;
+}
+
+.chart-trend {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.trend-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.trend-text {
+  font-size: 10px;
+  color: #6b7280;
+}
+
+/* ===== CHART CONTENT ===== */
+.chart-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chart-display {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  overflow: visible;
+}
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-center-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
+}
+
+.chart-center-value.large {
+  font-size: 22px;
+}
+
+/* ===== ASSESSMENT STATUS SPECIFIC ===== */
+.assessment-status-wrapper {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.assessment-content {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex: 1;
+}
+
+.chart-display {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  position: relative;
+}
+
+.chart-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 8px;
+}
+
+.detail-label {
+  font-size: 10px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: right;
+}
+
+.health-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  background: #f0fdf4;
+  border-radius: 4px;
+  border-left: 3px solid #10b981;
+  margin-top: 4px;
+}
+
+.health-check {
+  font-weight: 700;
+  color: #10b981;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+}
+
+.health-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.health-value {
+  font-size: 11px;
+  font-weight: 700;
+  color: #10b981;
+  line-height: 1;
+}
+
+.health-label {
+  font-size: 9px;
+  color: #6b7280;
+  line-height: 1.1;
+}
+
+/* ===== FINDING APPROVALS SPECIFIC ===== */
+.finding-approvals-wrapper {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.approvals-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.progress-bars-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+.progress-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6b7280;
+  flex: 1;
+}
+
+.progress-percentage {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1f2937;
+  min-width: 30px;
+  text-align: right;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-count {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.approvals-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 0;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 2px;
+  gap: 8px;
+}
+
+.footer-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-label {
+  font-size: 9px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.footer-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* ===== FINDINGS LIFECYCLE SPECIFIC ===== */
+.findings-lifecycle-wrapper {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.lifecycle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.status-indicators {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  flex: 1;
+  max-width: 120px;
+  justify-content: center;
+}
+
+.status-item.open-status {
+  background: #fef3c7;
+}
+
+.status-item.closed-status {
+  background: #dcfce7;
+}
+
+.status-icon {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 14px;
+}
+
+.status-item.open-status .status-icon {
+  color: #f59e0b;
+}
+
+.status-item.closed-status .status-icon {
+  color: #10b981;
+}
+
+.status-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  text-align: center;
+}
+
+.status-type {
+  font-size: 9px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.status-count {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.lifecycle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 6px;
+  border-top: 1px solid #f0f0f0;
+  width: 100%;
+  text-align: center;
+}
+
+.info-item {
+  font-size: 10px;
+  color: #6b7280;
+  line-height: 1.2;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .assessment-content {
+    grid-template-columns: 140px 1fr;
+    gap: 12px;
+  }
+
+  .chart-display {
+    height: 140px;
+  }
+
+  .chart-center-value {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-wrapper {
+    padding: 12px;
+  }
+
+  .chart-header {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+
+  .chart-title {
+    font-size: 11px;
+  }
+
+  .assessment-content {
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+  }
+
+  .chart-display {
+    height: 120px;
+  }
+
+  .chart-center-value {
+    font-size: 20px;
+  }
+
+  .detail-label {
+    font-size: 11px;
+  }
+
+  .detail-value {
+    font-size: 13px;
+  }
+
+  .progress-label {
+    font-size: 10px;
+  }
+
+  .status-count {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-wrapper {
+    padding: 12px;
+  }
+
+  .assessment-content {
+    grid-template-columns: 100px 1fr;
+    gap: 8px;
+  }
+
+  .chart-display {
+    height: 100px;
+  }
+
+  .chart-center-value {
+    font-size: 18px;
+  }
+
+  .detail-row {
+    padding: 4px 0;
+    gap: 8px;
+  }
+
+  .detail-label {
+    font-size: 10px;
+  }
+
+  .status-indicators {
+    gap: 6px;
+  }
+
+  .status-item {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+
+  .chart-title {
+    font-size: 10px;
+  }
+
+  .progress-item {
+    gap: 2px;
+  }
+
+  .progress-bar-container {
+    height: 5px;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .chart-wrapper {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .chart-wrapper:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .chart-header {
+    border-bottom-color: #374151;
+  }
+
+  .chart-title {
+    color: #f9fafb;
+  }
+
+  .chart-subtitle,
+  .detail-label,
+  .progress-label,
+  .status-type,
+  .trend-text,
+  .footer-label,
+  .info-item {
+    color: #d1d5db;
+  }
+
+  .detail-value,
+  .progress-count,
+  .status-count,
+  .footer-value,
+  .chart-center-value {
+    color: #f9fafb;
+  }
+
+  .detail-row {
+    border-bottom-color: #374151;
+  }
+
+  .progress-bar-container {
+    background: #4b5563;
+  }
+
+  .health-indicator {
+    background: #064e3b;
+  }
+
+  .approvals-footer,
+  .lifecycle-info {
+    border-top-color: #374151;
+  }
+
+  .status-item.open-status {
+    background: #664d03;
+  }
+
+  .status-item.closed-status {
+    background: #164e63;
+  }
+}

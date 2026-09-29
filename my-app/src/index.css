@@ -1,0 +1,8 @@
+/* DEWA Design System - Global Styles */
+@import './styles/dewa-base.css';
+@import './styles/components.css';
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}

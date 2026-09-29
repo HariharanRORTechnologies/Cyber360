@@ -1,0 +1,607 @@
+/* ===== TEAM MANAGER DASHBOARD STYLING ===== */
+
+.tm-dashboard {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ===== KPI CARDS (same pattern as other role dashboards) ===== */
+.tm-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.tm-kpi-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.tm-kpi-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tm-kpi-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tm-kpi-heading-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.tm-kpi-icon-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tm-kpi-pill {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.tm-kpi-number {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.tm-kpi-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tm-kpi-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 11px;
+}
+
+.tm-kpi-footer-left {
+  color: #94a3b8;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tm-kpi-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ===== MIDDLE SECTION - THREE CARDS ===== */
+.tm-main-content-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.tm-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.tm-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #087B36;
+}
+
+.tm-card-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tm-card-title svg {
+  color: #087B36;
+  flex-shrink: 0;
+}
+
+.tm-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tm-pill-neutral {
+  background: #ecfdf5;
+  color: #087B36;
+}
+
+.tm-pill-danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.tm-pill-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* ===== FOOTER (shared by middle cards) ===== */
+.tm-card-footer {
+  display: flex;
+  gap: 12px;
+  padding-top: 12px;
+  margin-top: auto;
+  border-top: 1px solid #e2e8f0;
+}
+
+.tm-footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.tm-footer-label {
+  font-size: 10px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.tm-footer-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #087B36;
+}
+
+.tm-footer-value-danger {
+  color: #dc2626;
+}
+
+/* ===== RISK DISTRIBUTION DONUT ===== */
+.tm-donut-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.tm-donut-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tm-donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.tm-donut-total {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.tm-donut-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-top: 2px;
+}
+
+.tm-risk-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.tm-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.tm-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.tm-legend-name {
+  color: #475569;
+  font-weight: 500;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tm-legend-value {
+  color: #1e293b;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+/* ===== SLA GAUGE ===== */
+.tm-gauge-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.tm-gauge-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.tm-gauge-percent {
+  font-size: 24px;
+  font-weight: 800;
+  color: #087B36;
+  line-height: 1.1;
+}
+
+.tm-gauge-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.tm-sla-chip-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.tm-sla-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.tm-sla-chip-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.tm-sla-chip-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.tm-sla-chip-label {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* ===== TEAM MEMBER WORKLOAD TABLE ===== */
+.tm-summary-section {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.tm-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tm-summary-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tm-summary-count {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.tm-export-btn {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tm-export-btn:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.tm-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tm-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tm-summary-table thead {
+  background: #087B36;
+}
+
+.tm-summary-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 700;
+  color: white;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tm-summary-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.tm-summary-table tbody tr.even {
+  background: white;
+}
+
+.tm-summary-table tbody tr.odd {
+  background: #f8fafc;
+}
+
+.tm-summary-table tbody tr:hover {
+  background: #f1f5f9;
+  transition: background 0.2s;
+}
+
+.tm-member-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tm-member-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #dbeafe;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0284c7;
+  flex-shrink: 0;
+}
+
+.tm-member-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.tm-health-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tm-health-badge.good {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tm-health-badge.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .tm-kpi-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tm-main-content-three {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .tm-dashboard {
+    padding: 12px;
+  }
+
+  .tm-kpi-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tm-card,
+  .tm-summary-section {
+    padding: 12px;
+  }
+
+  .tm-summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tm-summary-table th,
+  .tm-summary-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .tm-dashboard {
+    background: #0f172a;
+  }
+
+  .tm-kpi-card,
+  .tm-card,
+  .tm-summary-section {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .tm-kpi-number,
+  .tm-card-title,
+  .tm-summary-title,
+  .tm-member-name,
+  .tm-legend-value,
+  .tm-donut-total,
+  .tm-gauge-value,
+  .tm-sla-chip-value {
+    color: #f1f5f9;
+  }
+
+  .tm-kpi-footer-row,
+  .tm-card-footer {
+    border-top-color: #334155;
+  }
+
+  .tm-kpi-footer-left,
+  .tm-donut-label,
+  .tm-gauge-label,
+  .tm-footer-label,
+  .tm-legend-name,
+  .tm-sla-chip-label,
+  .tm-summary-count {
+    color: #94a3b8;
+  }
+
+  .tm-pill-neutral {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+  }
+
+  .tm-export-btn {
+    background: #1e293b;
+    border-color: #334155;
+    color: #cbd5e1;
+  }
+
+  .tm-member-avatar {
+    background: #1e3a8a;
+    color: #60a5fa;
+  }
+
+  .tm-summary-table thead {
+    background: #0f172a;
+  }
+
+  .tm-summary-table th {
+    border-bottom-color: #334155;
+    color: #cbd5e1;
+  }
+
+  .tm-summary-table td {
+    border-bottom-color: #334155;
+    color: #cbd5e1;
+  }
+
+  .tm-summary-table tbody tr.even,
+  .tm-summary-table tbody tr.odd {
+    background: #1e293b;
+  }
+
+  .tm-summary-table tbody tr:hover {
+    background: #334155;
+  }
+}

@@ -1,0 +1,539 @@
+.assessment-detail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+}
+
+/* Assessment Details Section */
+.assessment-details-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.logs-button {
+  background: white;
+  border: none;
+  color: #087B36;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s;
+}
+
+.logs-button:hover {
+  color: #065726;
+}
+
+.details-table-wrapper {
+  overflow-x: auto;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.details-table thead {
+  background: #087B36;
+  border-bottom: 1px solid #065726;
+}
+
+.details-table thead th {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  border-bottom: none;
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.details-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  height: 40px;
+}
+
+.details-table tbody td {
+  padding: 0.6rem 0.75rem;
+  color: #374151;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.85rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Findings Section */
+.findings-section {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state {
+  text-align: center;
+}
+
+.empty-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.empty-subtitle {
+  margin: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.btn-add-finding {
+  padding: 0.8rem 1.5rem;
+  background: #087B36;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-add-finding:hover {
+  background: #065726;
+}
+
+/* Findings Container */
+.findings-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Findings Controls */
+.findings-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-create-finding {
+  background: #087B36;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-create-finding:hover {
+  background: #065726;
+}
+
+.search-box-finding {
+  flex: 1;
+  max-width: 300px;
+}
+
+.search-box-finding input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.search-box-finding input:focus {
+  outline: none;
+  border-color: #087B36;
+  box-shadow: 0 0 0 2px rgba(8, 123, 54, 0.1);
+}
+
+.btn-icon-control {
+  background: white;
+  border: 1px solid #d1d5db;
+  padding: 0.6rem;
+  border-radius: 6px;
+  color: #6b7280;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn-icon-control:hover {
+  background: #f9fafb;
+  color: #087B36;
+  border-color: #087B36;
+}
+
+/* Findings Table */
+.findings-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.findings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.findings-table thead {
+  background: #087B36;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.findings-table thead th {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+  border: none;
+  font-size: 0.85rem;
+}
+
+.findings-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  height: 40px;
+  transition: all 0.2s;
+}
+
+.findings-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.findings-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.findings-table tbody td {
+  padding: 0.6rem 0.75rem;
+  color: #374151;
+  vertical-align: middle;
+}
+
+.finding-reference {
+  font-weight: 600;
+  color: #087B36;
+}
+
+/* Severity Badges */
+.severity-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.severity-critical {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.severity-high {
+  background: #fecaca;
+  color: #b91c1c;
+}
+
+.severity-medium {
+  background: #fcd34d;
+  color: #92400e;
+}
+
+.severity-low {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.severity-info {
+  background: #d1e7f0;
+  color: #0c4a6e;
+}
+
+/* Status Badge for Findings */
+.status-badge-finding {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* SLA Badges */
+.sla-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sla-within {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.sla-nearing {
+  background: #fcd34d;
+  color: #92400e;
+}
+
+.sla-breached {
+  background: #fecaca;
+  color: #b91c1c;
+}
+
+.sla-none {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Action Cell */
+.action-cell {
+  position: relative;
+  text-align: center;
+  width: 50px;
+}
+
+.action-menu-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-action:hover {
+  color: #087B36;
+}
+
+/* Action Menu */
+.action-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  min-width: 120px;
+  margin-top: 0.25rem;
+}
+
+.menu-item {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menu-item:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.menu-item:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.menu-item:hover {
+  background: #f3f4f6;
+  color: #087B36;
+}
+
+.menu-item.delete:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Pagination */
+.findings-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.page-info {
+  font-weight: 500;
+}
+
+.pagination-arrows {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-arrows button {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 4px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination-arrows button:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #087B36;
+  color: #087B36;
+}
+
+.pagination-arrows button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .assessment-details-section {
+    padding: 1rem;
+  }
+
+  .details-table td.label {
+    width: 30%;
+  }
+
+  .findings-controls {
+    flex-wrap: wrap;
+  }
+
+  .search-box-finding {
+    max-width: 100%;
+  }
+
+  .findings-table {
+    font-size: 0.75rem;
+  }
+
+  .findings-table thead th,
+  .findings-table tbody td {
+    padding: 0.5rem;
+  }
+
+  .findings-table tbody tr {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-title {
+    font-size: 1.4rem;
+  }
+
+  .detail-header {
+    padding: 1rem;
+  }
+
+  .assessment-details-section {
+    padding: 1rem;
+  }
+
+  .findings-container {
+    padding: 1rem;
+  }
+
+  .empty-title {
+    font-size: 1rem;
+  }
+
+  .empty-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .findings-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-create-finding {
+    width: 100%;
+  }
+
+  .search-box-finding {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .findings-table-wrapper {
+    font-size: 0.7rem;
+  }
+
+  .findings-table thead th,
+  .findings-table tbody td {
+    padding: 0.4rem;
+  }
+}

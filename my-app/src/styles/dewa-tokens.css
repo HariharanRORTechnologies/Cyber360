@@ -1,0 +1,214 @@
+/* DEWA Design System - Version 1.2 */
+/* Design Tokens for Cyber360 Application */
+
+:root {
+  /* ===== COLOR PALETTE ===== */
+
+  /* Primary Colors */
+  --dewa-primary: #087B36;
+  --dewa-primary-dark: #065726;
+  --dewa-primary-light: #E8F5E9;
+
+  /* Gradients */
+  --dewa-gradient-primary: linear-gradient(135deg, #065726 0%, #087B36 100%);
+
+  /* Semantic Colors */
+  --dewa-success: #087B36;
+  --dewa-error: #E10E49;
+  --dewa-warning: #AC631C;
+  --dewa-info: #0079C1;
+
+  /* Text Colors */
+  --dewa-text-primary: #3F3F3F;
+  --dewa-text-secondary: #717173;
+  --dewa-text-disabled: #9B9B9B;
+  --dewa-text-inverse: #FFFFFF;
+
+  /* Background Colors */
+  --dewa-background: #F1F1F1;
+  --dewa-surface: #FFFFFF;
+  --dewa-surface-hover: #F8F8F8;
+  --dewa-surface-active: #F0F0F0;
+
+  /* Border Colors */
+  --dewa-border-light: #E5E5E5;
+  --dewa-border-default: #D0D0D0;
+  --dewa-border-dark: #9B9B9B;
+
+  /* Status Colors */
+  --dewa-draft: #9B9B9B;
+  --dewa-open: #0079C1;
+  --dewa-pending: #AC631C;
+  --dewa-retest: #FFA500;
+  --dewa-closed: #087B36;
+
+  /* Severity Colors */
+  --dewa-critical: #E10E49;
+  --dewa-high: #E10E49;
+  --dewa-medium: #AC631C;
+  --dewa-low: #0079C1;
+  --dewa-info-severity: #9B9B9B;
+
+  /* Graph Colors */
+  --dewa-graph-green: #087B36;
+  --dewa-graph-yellow: #FFDA5B;
+  --dewa-graph-orange: #F5A623;
+  --dewa-graph-red: #E10E49;
+  --dewa-graph-blue: #0079C1;
+
+  /* ===== TYPOGRAPHY ===== */
+
+  /* Font Family */
+  --dewa-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Dubai', 'Roboto', sans-serif;
+  --dewa-font-family-code: 'Courier New', monospace;
+
+  /* Font Sizes (Enterprise App Scale) */
+  --dewa-font-size-xs: 12px;
+  --dewa-font-size-sm: 13px;
+  --dewa-font-size-base: 14px;
+  --dewa-font-size-md: 15px;
+  --dewa-font-size-lg: 16px;
+  --dewa-font-size-xl: 18px;
+  --dewa-font-size-2xl: 20px;
+  --dewa-font-size-3xl: 24px;
+  --dewa-font-size-4xl: 28px;
+  --dewa-font-size-5xl: 32px;
+
+  /* Font Weights */
+  --dewa-font-weight-normal: 400;
+  --dewa-font-weight-medium: 500;
+  --dewa-font-weight-semibold: 600;
+  --dewa-font-weight-bold: 700;
+
+  /* Line Heights */
+  --dewa-line-height-tight: 1.2;
+  --dewa-line-height-normal: 1.5;
+  --dewa-line-height-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --dewa-letter-spacing-tight: -0.5px;
+  --dewa-letter-spacing-normal: 0px;
+  --dewa-letter-spacing-wide: 0.5px;
+
+  /* ===== SPACING ===== */
+
+  --dewa-space-xs: 4px;
+  --dewa-space-sm: 8px;
+  --dewa-space-md: 12px;
+  --dewa-space-lg: 16px;
+  --dewa-space-xl: 24px;
+  --dewa-space-2xl: 32px;
+  --dewa-space-3xl: 48px;
+
+  /* ===== BORDER RADIUS ===== */
+
+  --dewa-radius-sm: 4px;
+  --dewa-radius-md: 6px;
+  --dewa-radius-lg: 8px;
+  --dewa-radius-xl: 12px;
+  --dewa-radius-full: 9999px;
+
+  /* ===== SHADOWS ===== */
+
+  --dewa-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --dewa-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --dewa-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --dewa-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12);
+  --dewa-shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+  /* ===== COMPONENT SIZES ===== */
+
+  --dewa-button-height-sm: 32px;
+  --dewa-button-height-md: 40px;
+  --dewa-button-height-lg: 48px;
+
+  --dewa-input-height: 40px;
+  --dewa-select-height: 40px;
+
+  --dewa-table-row-height: 44px;
+  --dewa-table-header-height: 48px;
+
+  --dewa-kpi-card-height: 140px;
+  --dewa-chart-card-min-height: 320px;
+
+  /* ===== TRANSITIONS ===== */
+
+  --dewa-transition-fast: 150ms ease-in-out;
+  --dewa-transition-base: 250ms ease-in-out;
+  --dewa-transition-slow: 350ms ease-in-out;
+
+  /* ===== Z-INDEX ===== */
+
+  --dewa-z-dropdown: 100;
+  --dewa-z-modal: 200;
+  --dewa-z-tooltip: 300;
+  --dewa-z-notification: 400;
+  --dewa-z-sidebar: 50;
+  --dewa-z-header: 60;
+
+  /* ===== BREAKPOINTS ===== */
+
+  --dewa-breakpoint-xs: 320px;
+  --dewa-breakpoint-sm: 480px;
+  --dewa-breakpoint-md: 768px;
+  --dewa-breakpoint-lg: 1024px;
+  --dewa-breakpoint-xl: 1280px;
+  --dewa-breakpoint-2xl: 1536px;
+}
+
+/* ===== DARK MODE (if needed in future) ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dewa-text-primary: #FFFFFF;
+    --dewa-text-secondary: #E0E0E0;
+    --dewa-text-disabled: #808080;
+
+    --dewa-background: #1A1A1A;
+    --dewa-surface: #2D2D2D;
+    --dewa-surface-hover: #3A3A3A;
+    --dewa-surface-active: #454545;
+
+    --dewa-border-light: #3A3A3A;
+    --dewa-border-default: #4A4A4A;
+    --dewa-border-dark: #5A5A5A;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+.text-primary {
+  color: var(--dewa-text-primary);
+}
+
+.text-secondary {
+  color: var(--dewa-text-secondary);
+}
+
+.text-disabled {
+  color: var(--dewa-text-disabled);
+}
+
+.bg-primary {
+  background-color: var(--dewa-primary);
+  color: var(--dewa-text-inverse);
+}
+
+.bg-surface {
+  background-color: var(--dewa-surface);
+}
+
+.bg-page {
+  background-color: var(--dewa-background);
+}
+
+.shadow-sm {
+  box-shadow: var(--dewa-shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--dewa-shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--dewa-shadow-lg);
+}
